@@ -30,5 +30,8 @@ public class SupplyService {
         return supplyRepository.getReferenceById(id);
     }
 
-
+    public void deleteById(String id) {
+        supplyRepository.deleteById(id);
+        System.out.println("Supply " + id + " has been deleted");
+    }
 }

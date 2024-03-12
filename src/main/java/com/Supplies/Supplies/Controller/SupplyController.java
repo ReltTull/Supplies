@@ -35,4 +35,10 @@ public class SupplyController {
     public Supply getSupplyById(@PathVariable String id) {
         return service.getSupplyBuId(id);
     }
+
+    @DeleteMapping("/deleteSupply/{id}")
+    public String deleteSupply(@PathVariable String id) {
+        service.deleteById(id);
+        return "Record " + id + " has been deleted";
+    }
 }
