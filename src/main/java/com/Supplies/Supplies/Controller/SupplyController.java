@@ -26,6 +26,11 @@ public class SupplyController {
         return service.saveRecord(supply);
     }
 
+    @PutMapping("/updateSupply")
+    public Supply updateSupplyDetails(@RequestBody Supply supply) {
+        return service.updateSupplyDetails(supply);
+    }
+
     @GetMapping("/all")
     public List<Supply> getSupplies() {
         return service.getAllRecords();
